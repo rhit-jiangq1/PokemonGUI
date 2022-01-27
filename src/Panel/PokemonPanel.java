@@ -1,6 +1,5 @@
 package Panel;
 
-import Database.DatabaseConnection;
 import Listener.*;
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +15,6 @@ public class PokemonPanel extends JPanel {
     private JButton filterButton = null;
     private JTable pokemonTable = null;
     private JScrollPane sPane;
-    private DatabaseConnection db;
 
 
     public PokemonPanel(){
