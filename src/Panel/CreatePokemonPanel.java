@@ -8,6 +8,10 @@ public class CreatePokemonPanel extends JPanel {
 
     private JTextField name = null;
     private JComboBox<String> specieComboBox = null;
+    private JComboBox<String> TrainerIDBox = null;
+    private JComboBox<String> NameBox = null;
+    private JComboBox<String> GenderBox = null;
+    private JComboBox<String> AbilityIDBox = null;
     private JTextField levelTextField = null;
     private JButton createButton = null;
 
@@ -25,13 +29,31 @@ public class CreatePokemonPanel extends JPanel {
         layout.setHgap(15);
         this.setLayout(layout);
 
-        createButton.addActionListener(new CreateListener());
+       
 
         this.add(new JLabel("Create a Pokemon:          "));
-        this.add(new JLabel("Specie"));
+
+    	this.add(new JLabel("TrainerID"));
+        this.add(TrainerIDBox);
+        
+        this.add(new JLabel("Name"));
+        this.add(NameBox);
+        
+        this.add(new JLabel("Gender"));
+        this.add(GenderBox);
+        
+        this.add(new JLabel("AbilityID"));
+        this.add(AbilityIDBox);	
+        
+    	this.add(new JLabel("Specie"));
         this.add(specieComboBox);
+        
         this.add(new JLabel("Level"));
         this.add(levelTextField);
+        
         this.add(createButton);
+        
+        createButton.addActionListener(new CreateListener());
     }
 }
+
